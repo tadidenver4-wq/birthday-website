@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎂 Birthday Celebration 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 🎀 Decorative Side Ribbons -->
+  <div class="ribbon left"></div>
+  <div class="ribbon right"></div>
+
+  <!-- 🎈 Pink Balloons on Top -->
+  <div class="balloon-field">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+  <header>
+    <h1>︶꒷꒦︶ ࣭ ⭑BIRTHDAY LIST︶꒷꒦︶</h1>
+    <p>🌸 Click a name to see more details 🌸</p>
+  </header>
+
+  <section class="birthday-section">
+    <h2>‧˚₊⊹𐙚Birthday Celebrants𐙚⊹₊˚‧</h2>
+    <div class="birthday-list" id="birthdayList">
+      <div class="birthday-item" onclick="showDetails('Ezekiel','Feb 06','But I am very poorly today & very stupid & I hate everybody & everything. One lives only to make blunders.','images/Ezekiel.jpg')">
+        <span class="name">Ezekiel</span><span class="date">Feb 06</span>
+      </div>
+      <div class="birthday-item" onclick="showDetails('Ace','Jan 28','Pain is inevitable. Suffering is optional.','images/Ace.jpg')">
+        <span class="name">Ace</span><span class="date">Jan 28</span>
+      </div>
+      <div class="birthday-item" onclick="showDetails('Denver','Jul 26','Insanity is doing the same thing, over and over again, but expecting different results.','images/Denver.jpg')">
+        <span class="name">Denver</span><span class="date">Jul 26</span>
+      </div>
+      <div class="birthday-item" onclick="showDetails('Roxanne','Apr 05','Life is tough my darling, but so are you.','images/Roxanne.jpg')">
+        <span class="name">Roxanne</span><span class="date">Apr 05</span>
+      </div>
+      <div class="birthday-item" onclick="showDetails('Rovie','Jun 18','Life is a one-time offer, use it well.','images/Rovie.jpg')">
+        <span class="name">Rovie</span><span class="date">Jun 18</span>
+      </div>
+      <div class="birthday-item" onclick="showDetails('Angelo','Jun 07','If you want to know what a man like, take a good look at how he treats his inferiors, not his equals.','images/Angelo.jpg')">
+        <span class="name">Angelo</span><span class="date">Jun 07</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalPhoto" src="" alt="Photo">
+      <h3 id="modalName"></h3>
+      <p id="modalDate"></p>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>Group 2</strong></p>
+  </footer>
+
+  <!-- 🌸 Animated Flowers at Bottom -->
+  <div class="flower-field">
+    <div class="flower"></div><div class="flower"></div><div class="flower"></div><div class="flower"></div>
+    <div class="flower"></div><div class="flower"></div><div class="flower"></div><div class="flower"></div>
+    <div class="flower"></div><div class="flower"></div><div class="flower"></div><div class="flower"></div>
+    <div class="flower"></div><div class="flower"></div><div class="flower"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

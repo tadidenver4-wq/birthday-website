@@ -1,0 +1,216 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffe4f1, #ffd6ec);
+  color: #4a004a;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* 🎀 Side Ribbons */
+.ribbon {
+  position: fixed;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffd6ec,
+    #ffd6ec 10px,
+    #ffccde 10px,
+    #ffccde 20px
+  );
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.ribbon.left {
+  left: 0;
+  border-radius: 0 20px 20px 0;
+}
+
+.ribbon.right {
+  right: 0;
+  border-radius: 20px 0 0 20px;
+}
+
+/* Header */
+header {
+  padding: 20px;
+  background-color: #ffccde;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+  z-index: 3;
+  position: relative;
+}
+
+/* Title */
+h1 {
+  color: #c2185b;
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+.birthday-section {
+  margin-top: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.birthday-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.birthday-item {
+  background-color: #ffeaf4;
+  border-radius: 15px;
+  padding: 10px 20px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(255, 105, 180, 0.15);
+}
+
+.birthday-item:hover {
+  background-color: #ffc1dc;
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 192, 203, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff0f6;
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ff9ecf;
+  margin-bottom: 10px;
+}
+
+/* 🎈 Pink Balloons */
+.balloon-field {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  pointer-events: none;
+  z-index: 5; /* now clearly above everything else */
+}
+
+.balloon {
+  position: relative;
+  width: 50px;
+  height: 65px;
+  background: radial-gradient(circle at 30% 30%, #ffb6d9, #ff9ecf);
+  border-radius: 50% 50% 45% 45%;
+  animation: floatUp 5s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.6);
+  opacity: 0.9;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: 2px;
+  height: 25px;
+  background: rgba(255, 105, 180, 0.6);
+  transform: translateX(-50%);
+}
+
+.balloon:nth-child(odd) {
+  animation-duration: 7s;
+}
+.balloon:nth-child(even) {
+  animation-duration: 9s;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(3deg); }
+  100% { transform: translateY(0) rotate(-3deg); }
+}
+
+/* 🌸 Animated Flowers */
+.flower-field {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.flower {
+  width: 40px;
+  height: 60px;
+  position: relative;
+  animation: sway 3s ease-in-out infinite;
+}
+
+.flower::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 6px;
+  height: 30px;
+  background: linear-gradient(to top, #77dd77, #ffb6d9);
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.flower::after {
+  content: "";
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle, #ff9ecf, #ffb6d9);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 12px 4px 0 #ffc1dc, -12px 4px 0 #ffc1dc;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
